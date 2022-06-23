@@ -1,0 +1,17 @@
+[mod]
+title: Eternal Conflict v1.0.0
+description: Main version of EC. 
+
+tags: units, maps
+
+
+thumbnail: Eternal conflict THUMBNAILHD3.jpg
+
+
+
+
+
+[music]
+sourceFolder: music/
+
+whenUsingUnitsFromThisMod_playExclusively: true
