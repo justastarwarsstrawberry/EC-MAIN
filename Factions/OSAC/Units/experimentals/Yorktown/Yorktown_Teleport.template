@@ -1,0 +1,147 @@
+# effects are form OA3(Miss lewd Tea: its form my mod, im lazy lol)
+[core]
+
+[graphics]
+
+[attack]
+
+[movement]
+
+[effect_areaShock_Die]
+life: 60
+priority: high
+image:shockwave.png
+fadeOut: true
+attachedToUnit: true
+color: #00ffff
+scaleTo: 4
+scaleFrom: 2
+alpha:2
+
+[effect_areaShock2_die]
+life: 30
+priority: low
+image:windWoosh.png
+fadeOut: true
+scaleTo: 3
+scaleFrom: 0
+attachedToUnit: true
+color: #00FFFF
+alpha: 2
+dirSpeed: 100
+
+[effect_areaShock3_die]
+@define size: 8
+life: 75
+alwayStartDirAtZero: 30
+priority: high
+image:lightningShock3.png
+
+total_frames: 14
+animateFrameStart: 0
+animateFrameEnd: 13
+animateFramePingPong: false
+animateFrameSpeed: 0.3
+animateFrameSpeedRandom: 0.2
+
+fadeOut: true
+scaleTo: ${size}
+scaleFrom: ${size}
+attachedToUnit: true
+#color: #00FFFF
+alpha: 1
+alwayStartDirAtZero: true
+
+[effect_sparks_die]
+attachedToUnit: false
+life: 200
+image: SHARED:spark.png
+priority: verylow
+scaleTo: 3
+scaleFrom: 3
+physics: true
+physicsGravity: 0.6
+shadow: false
+xOffsetRelativeRandom: 100
+yOffsetRelativeRandom: 100
+#dirOffsetRandom: 180
+xSpeedRelativeRandom: 0.8
+ySpeedRelativeRandom: 0.8
+dirSpeedRandom: 2
+alsoPlaySound: missile_hit: 0.45
+
+[effect_flash_die]
+life:40
+atmospheric: true
+xOffsetRelativeRandom: 3
+yOffsetRelativeRandom: 3
+image: light_2.png
+dirOffsetRandom: 30
+alsoPlaySound: missile_hit: 0.45
+scaleFrom: 2
+scaleTo: 2
+alpha: 0.5
+
+[effect_explosion1_die]
+life: 200
+scaleFrom: 2.5
+scaleTo: 2
+image: explosion_large.png
+total_frames: 14
+animateFrameStart: 0
+animateFrameEnd: 13
+animateFrameSpeed: 1
+
+[effect_explosion2_die]
+life:200
+scaleFrom: 10
+scaleTo: 10
+image: explosion_large2.png
+total_frames: 14
+animateFrameStart: 0
+animateFrameEnd: 13
+animateFrameSpeed: 0.5
+alpha: 0.3
+
+[effect_flareExplo_die]
+image: explosionFlare.png
+life: 60
+fadeOut: true
+scaleFrom: 2
+scaleTo: 2
+alwayStartDirAtZero: true
+alpha: 0.9
+
+[effect_Die_LiSpark_A]
+@define XYR:100
+@define SIze:2
+createWhenZoomedOut: false
+priority:verylow
+life: 90
+delayedStartTimer: 50
+attachedToUnit: true
+liveAfterAttachedDies: true
+image: lightings.png
+
+total_frames: 3
+animateFrameStart: 0
+animateFrameEnd: 2
+animateFramePingPong: true
+animateFrameSpeed: 0.35
+animateFrameLooping: true
+
+#color: #323232
+scaleFrom: ${SIze}
+scaleTo: ${SIze}
+alpha: 0.9
+fadeOut: true
+#drawUnderUnits:true
+dirOffsetRandom: 180
+
+xOffsetRelativeRandom: ${XYR -30}
+yOffsetRelativeRandom: ${XYR}
+
+[effect_Die_LiSpark_B]
+@copyFromSection: effect_Die_LiSpark_A
+@define XYR:25
+@define SIze:0.8

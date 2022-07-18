@@ -1,0 +1,175 @@
+[effect_blue_explosion]
+dirOffsetRandom:180
+priority:veryhigh
+fadeInTime: 3
+fadeOut: true
+attachedToUnit: false
+scaleFrom: 0.3
+scaleTo: 0.3
+yOffsetRelative: 5
+image:ROOT:Common/blue_explosion.png
+total_frames: 14
+animateFrameStart: 0
+animateFrameEnd: 13
+animateFramePingPong: false
+animateFrameSpeed: 0.35
+alpha:1
+
+[effect_muzzleFlame]
+priority: high
+image: ROOT:Common/rail_flame.png
+total_frames: 5
+animateFrameStart: 1
+animateFrameEnd: 4
+animateFramePingPong: true
+animateFrameSpeed: 0.5
+life: 15
+fadeOut: true
+color: #FFFFFF
+attachedToUnit: true
+scaleFrom: 0.5
+scaleTo: 0.5
+alpha: 1.5
+drawUnderUnits:false
+liveAfterAttachedDies: false
+yOffsetRelative: -2.5
+ySpeedRelative: 0.1
+physics: false
+hSpeed: 0.01
+
+[effect_muzzleFlame_2]
+image:ROOT:Common/someFlare.png
+priority:veryhigh
+life: 30
+fadeOut: true
+attachedToUnit: true
+color: #00FFFF
+scaleFrom: 2
+scaleTo: 2
+alpha: 0.9
+drawUnderUnits:false
+
+[effect_lightSlowFade]
+image: SHARED:light_50.png
+life: 20
+fadeOut: true
+attachedToUnit: true
+color: #00FFFF
+scaleFrom: 1.5
+scaleTo: 1
+alpha: 0.2
+drawUnderUnits:false
+
+[effect_Shotmuzzle]
+priority:critical
+image:ROOT:Common/muzzle_copy3.png
+life: 25
+fadeOut: true
+yOffsetRelative: 5
+attachedToUnit: true
+scaleFrom: 1
+scaleTo: 1
+alpha: 1
+
+[effect_Blueexplo2]
+life: 200
+image: ROOT:Common/explode_effect.png
+total_frames: 14
+animateFrameStart: 1
+animateFrameEnd: 14
+animateFrameSpeed: 0.58
+scaleTo: 1
+scaleFrom: 1
+color: #00eded
+
+[effect_hit_Explosion]
+life: 30
+priority: critical
+# its OA3 Sfx
+#alsoPlaySound: ROOT:data/sounds/impact_explosion_1.ogg:0.65
+xOffsetRelative: 0
+yOffsetRelative: 0
+dirOffset: 0
+dirOffsetRandom:180
+dirSpeedRandom: 1
+fadeInTime: 0
+fadeOut: true
+attachedToUnit: false
+scaleFrom: 1
+scaleTo: 4.5
+image:ROOT:Common/blast6.png
+total_frames: 5
+animateFrameStart: 0
+animateFrameEnd: 4
+animateFramePingPong: false
+animateFrameSpeed: 0.65
+animateFrameSpeedRandom: 0.1
+alpha:1
+
+[effect_Hit_FLight]
+image: ROOT:Common/light2.png
+spawnChance: 0.5
+life: 20
+fadeOut: true
+fadeInTime: 3
+attachedToUnit: true
+color: #00c9c9
+drawUnderUnits: false
+scaleFrom: 1
+scaleTo: 0
+priority: low
+createWhenOffscreen: false
+alpha: 1
+
+[effect_hit_Explosion2]
+priority: veryhigh
+attachedToUnit: false
+image:ROOT:Common/plasmaW.png
+life: 28
+fadeOut: true
+scaleFrom: 1
+scaleTo: 2
+alpha: 0.8
+dirSpeed: 5
+
+[effect_hit_shockwave]
+life: 30
+priority: veryhigh
+scaleFrom: 2
+scaleTo: 2
+image:ROOT:Common/shockwave6.png
+total_frames: 4
+animateFrameStart: 0
+animateFrameEnd: 3
+animateFramePingPong: false
+animateFrameSpeed: 0.65
+animateFrameSpeedRandom: 0.1
+alpha:1
+
+[effect_hit_AreaWave]
+priority: low
+attachedToUnit: false
+image:ROOT:Common/areaShock2.png
+life: 28
+fadeOut: true
+dirOffsetRandom: 180
+scaleFrom: 0.1
+scaleTo: 0.5
+alpha: 0.8
+
+[effect_hit_Spark]
+priority: low
+attachedToUnit: false
+image:ROOT:Common/light_2.png
+life: 60
+atmospheric: true
+physics: true
+fadeOut: true
+fadeInTime: 20
+dirOffsetRandom: 180
+dirSpeedRandom: 0.1
+xSpeedRelativeRandom: 1
+ySpeedRelativeRandom: 1
+scaleFrom: 0.05
+scaleTo: 0.05
+alpha: 1
