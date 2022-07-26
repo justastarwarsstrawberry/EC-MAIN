@@ -1,0 +1,63 @@
+#==========================================
+[action_press1]
+@define pr: 20
+#text: Turret ${pr}
+isVisible: if not self.hasFlag(id=${pr})
+buildSpeed:0
+displayType: action
+pos:20
+canPlayerCancel: false
+allowMultipleInQueue: false
+extraLagHidingInUI: true
+
+#===========================================
+text: [
+textAddUnitName: unitRef self.attachment(slot="module_${pr}")
+textPostFix: ]
+
+descriptionAddFromUnit: unitRef self.attachment(slot="module_${pr}")
+descriptionAddUnitStats: unitRef self.attachment(slot="module_${pr}")
+#unitShownInUI: unitRef self.attachment(slot="module_${pr}")
+#=====================================================================
+
+addResources: setFlag=${pr}, ammo=1
+isGuiBlinking: if self.hasFlag(id=${pr})
+
+#iconImage:ROOT:rework/Airship_module/icon_selected.png
+#iconExtraIsVisible: if self.hasFlag(id=${pr})
+#iconExtraImage: ROOT:rework/Airship_module/icon_selected.png
+alsoTriggerAction: unflag
+
+[hiddenAction_unflag]
+requireConditional: if self.hasFlag(id=1) and self.resource(type='ammo', greaterThan=1)
+addResources: unsetFlag=20, ammo=-2
+#[resource_select1]
+#displayName: se
+#hidden: true
+[attachment_module_20]
+@define pr: 20
+x: 0
+y: 0
+#idleDir:-60
+idleDir:0
+#idleDirReversing:180
+
+#-----------------------
+onCreateSpawnUnitOf:EC_OSAS_HQ_DH_HOLDER
+#-----------------------
+
+addTransportedUnits: true
+setDrawLayerOnTop: true
+lockLegMovement:false
+keepAliveWhenParentDies: false
+canBeAttackedAndDamaged: false
+isUnselectable: false
+
+showAllActionsFrom: if self.hasFlag(id=${pr})
+
+#resetRotationWhenNotAttacking:true
+lockRotation: true
+createIncompleteIfParentIs: false
+redirectDamageToParent: true
+redirectDamageToParent_shieldOnly: true
+#original codes by stargazzer_end
