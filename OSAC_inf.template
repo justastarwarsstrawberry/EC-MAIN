@@ -1,0 +1,64 @@
+softCollisionOnAll: 0
+[hiddenAction_created]
+autoTriggerOnEvent:created
+resetCustomTimer: true
+
+[hiddenAction_removeattach]
+autoTriggerOnEvent: destroyed
+attachments_deleteNumUnits: 1
+attachments_onlyOnSlots: ICON 
+[attachment_ICON]
+x: 0
+y: 2
+idleDir: -0
+isUnselectable: true
+canBeAttackedAndDamaged: true
+resetRotationWhenNotAttacking: false
+isVisible: true
+lockRotation: true
+lockLegMovement: true
+setDrawLayerOnTop: true
+rotateWithParent: false
+
+
+[action_slower]
+isVisible: if not self.hasFlag(id=5)
+autoTrigger: if self.customTimer(laterThanSeconds=120) and not self.hasFlag(id=5)
+isLocked: true
+iconImage: ROOT:Common/alert.png
+text: Ineffiecent energy
+displayType: infoOnly
+isLockedMessage: 120s after this unit is created \n it will automatically slow down it's speed and other debuffs
+#'
+setUnitStats: moveSpeed=0.55, maxTurnSpeed=2.1
+addResources: setFlag=5
+attachments_addNewUnits: iconeer
+attachments_deleteNumUnits: 1
+attachments_onlyOnSlots: ICON
+[action_sad]
+isVisible: if self.hasFlag(id=5)
+isLocked: true
+isLockedMessage: Slower turn speed and move speed plus no more ability
+text: Energy ran out
+displayType: infoOnly
+iconImage: ROOT:Common/alert.png
+
+[action_run]
+isVisible: if not self.hasFlag(id=5)
+isLocked: if self.hasFlag(id=1) or self.hasFlag(id=5)
+isLockedMessage: Ability already being used!
+isLockedAltMessage: Ineffiecent energy
+text: ostrich legs
+description:\nOSAC Infantry robots \n- Run faster for a short amount of time \n - The robots are better!
+allowMultipleInQueue: false
+price: energy=1
+alsoQueueAction: cooldown
+setUnitStats: moveSpeed=1.3
+addResources: setFlag=1
+
+[hiddenAction_cooldown]
+buildSpeed: 5s
+addActionCooldownApplyToActions: run
+addActionCooldownTime: 30s
+addResources: unsetFlag=1
+resetUnitStats: true
