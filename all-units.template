@@ -13,4 +13,14 @@ hidden: true
 displayNameShort: Research
 displayColor: #ec1c24
 
+[global_resource_AdvanceParts]
+displayName: Advance Parts
+displayNameShort: AP
+displayColor: #1db5b5
+hidden: false
 
+[global_resource_ManPower]
+displayName: Manpower
+displayNameShort: MP
+displayColor: #71781d
+hidden:false
