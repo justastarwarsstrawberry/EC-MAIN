@@ -1,0 +1,22 @@
+[hiddenAction_unitlost]
+autoTriggerOnEvent: destroyed
+requireConditional: if not self.globalTeamTags(includes='VOICEOFF')
+playSoundToPlayer: ROOT:Voicelines/Misc/unitlost.ogg:1000.0
+debugMessage: dead voice triggered
+showQuickWarLogToPlayer: Unit lost
+
+#building codes
+[hiddenAction_alive]
+autoTriggerOnEvent: created
+requireConditional: if not self.globalTeamTags(includes='VOICEOFF')
+playSoundToPlayer: ROOT:Voicelines/Misc/buildingfinished.ogg:1000.0
+showQuickWarLogToPlayer: Building completed
+
+[hiddenAction_deadBuilding]
+autoTriggerOnEvent: destroyed
+requireConditional: if not self.globalTeamTags(includes='VOICEOFF')
+playSoundToPlayer: ROOT:Voicelines/Misc/building lost.ogg:1000.0
+showQuickWarLogToPlayer: Building destroyed
+
+
+#copyFrom: ROOT:VCD.template
