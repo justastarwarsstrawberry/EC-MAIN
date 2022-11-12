@@ -1,5 +1,5 @@
 [mod]
-title: Eternal Conflict v1.02
+title: Eternal Conflict v1.03 Patch #2
 description: Main version of EC. 
 
 tags: units, maps
@@ -7,7 +7,7 @@ tags: units, maps
 
 thumbnail: Eternal conflict THUMBNAILHD3.jpg
 
-
+minVersion: 1.15p9
 
 
 
