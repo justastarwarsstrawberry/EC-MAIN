@@ -20,9 +20,8 @@ lockLegMovement: true
 setDrawLayerOnTop: true
 rotateWithParent: false
 
-
 [action_slower]
-isVisible: if not self.hasFlag(id=5)
+isVisible: if not self.customTimer(laterThanSeconds=120)
 autoTrigger: if self.customTimer(laterThanSeconds=120) and not self.hasFlag(id=5)
 isLocked: true
 iconImage: ROOT:Common/alert.png
@@ -33,19 +32,65 @@ isLockedMessage: 120s after this unit is created \n it will automatically slow d
 setUnitStats: moveSpeed=0.55, maxTurnSpeed=2.1
 addResources: setFlag=5
 attachments_addNewUnits: iconeer
-attachments_deleteNumUnits: 1
 attachments_onlyOnSlots: ICON
+
+[effect_charging]
+priority: critical
+fadeOut: true
+scaleTo: 0.055
+scaleFrom: 0.05
+image: ROOT:Common/circle.png
+life: 1100
+delayedStartTimer:4
+attachedToUnit: true 
+color: #08f2ff
+alpha: 2
+drawUnderUnits: true
+
+[hiddenAction_triggercharge]
+
+autoTrigger: if self.hasUnitInTeam(withTag='Battery', withinRange=100, lessThan=5) 
+requireConditional: if self.customTimer(laterThanSeconds=120) and self.hasFlag(id=5) and not self.hasFlag(id=8)
+alsoQueueAction: stop
+debugMessage: sent
+addActionCooldownTime: 120s 
+buildSpeed: 1s
+addResources: setFlag=8
+isLocked: if self.hasFlag(id=8)
+allowMultipleInQueue: false
+isActive: if not self.hasFlag(id=8)
+
+
+[hiddenAction_stop]
+setUnitStats: moveSpeed=0.0
+alsoQueueAction: recharge
+buildSpeed: 0.1s
+clearActiveWaypoint: true
+spawnEffects: CUSTOM:charging
+
+
+[action_recharge]
+buildSpeed: 15s
+isVisible: false
+addResources: unsetFlag=5, unsetFlag=8
+resetCustomTimer: true
+resetUnitStats: true
+debugMessage: triggered
+attachments_deleteNumUnits: 1
+attachments_onlyOnSlots: ICON 
+addActionCooldownTime: 120s
+allowMultipleInQueue: false
 [action_sad]
-isVisible: if self.hasFlag(id=5)
+isVisible: if self.customTimer(laterThanSeconds=120)
 isLocked: true
-isLockedMessage: Slower turn speed and move speed plus no more ability
+isLockedMessage: Slower turn speed and move speed no more ability
 text: Energy ran out
 displayType: infoOnly
 iconImage: ROOT:Common/alert.png
 
 [action_run]
-isVisible: if not self.hasFlag(id=5)
-isLocked: if self.hasFlag(id=1) or self.hasFlag(id=5)
+isVisible: if not self.customTimer(laterThanSeconds=120) 
+isLocked: if self.hasFlag(id=1) or self.hasFlag(id=6) 
 isLockedMessage: Ability already being used!
 isLockedAltMessage: Ineffiecent energy
 text: ostrich legs
