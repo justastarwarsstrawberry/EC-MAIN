@@ -1,5 +1,5 @@
 [mod]
-title: Eternal Conflict v1.04a
+title: Eternal Conflict v1.05
 description: Main version of EC. 
 
 tags: units, maps
