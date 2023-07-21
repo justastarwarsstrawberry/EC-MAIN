@@ -799,13 +799,13 @@ drawUnderUnits: false
 #======DECAL!==========
 
 
-[decal_border]
-layer: onTop
-onlyWhenSelectedByAnyPlayer: true
+#[decal_border]
+#layer: onTop
+#onlyWhenSelectedByAnyPlayer: true
 
-onlyWithZoomLevelOrMore: 0.5
-onlyWhileActive: true
+#onlyWithZoomLevelOrMore: 0.5
+#onlyWhileActive: true
 
-image: ROOT:Common/decal1.png
-teamColors: true
-alpha: 0.85
+#image: ROOT:Common/decal1.png
+#teamColors: true
+#alpha: 0.85
