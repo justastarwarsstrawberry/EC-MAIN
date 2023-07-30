@@ -608,6 +608,89 @@ animateFrameSpeed:0.09
 frame_width: 8
 frame_height: 12
 
+#========== TELEPORTATION ==========#
+
+
+[effect_fastShockwave]
+xOffsetAbsolute: 70
+yOffsetRelative: 40
+priority: high
+attachedToUnit: true
+life: 400
+scaleFrom: 0.1
+scaleTo: 2.9
+stripIndex: shockwave_large
+drawUnderUnits: false
+color: #08f2ff
+alsoEmitEffects: CUSTOM:Light, CUSTOM: Light2, CUSTOM:fastShockwave2LARGE, CUSTOM:fastShockwave2LARGEDIS
+
+[effect_fastShockwave2LARGE]
+@copyFromSection: effect_fastShockwave
+life:  100
+scaleFrom: 0.1
+scaleTo: 14
+alsoEmitEffects: NONE
+
+[effect_fastShockwave2LARGEDIS]
+@copyFromSection: effect_fastShockwave2LARGE
+drawType:displacement
+scaleTo: 14.1
+[effect_Light]
+life: 60
+lifeRandom: +100
+xOffsetRelativeRandom: -60
+yOffsetRelativeRandom: +80
+image: ROOT:Common/light_2.png
+scaleFrom: 0.5
+scaleTo: 0.2
+fadeOut: true
+fadeInTime: 2
+xSpeedRelative: 1
+ySpeedRelative: 1
+alsoEmitEffects: CUSTOM: Halo, CUSTOM: Halo2, CUSTOM:Allmatter
+
+[effect_Light2]
+@copyFromSection: effect_Light
+xOffsetRelativeRandom: 60
+yOffsetRelativeRandom: -80
+alsoEmitEffects: NONE
+[effect_Halo]
+alpha: 0.5
+xOffsetAbsolute: 70
+yOffsetRelative: 40
+priority: high
+attachedToUnit: true
+life: 100
+scaleFrom: 4
+scaleTo: 4
+image: ROOT:Common/shockwave_plasma.png
+drawUnderUnits: false
+color: #08f2ff
+dirOffsetRandom: +30
+dirOffset: 10
+dirSpeed: 100
+
+[effect_Halo2]
+@copyFromSection: effect_Halo
+scaleFrom: 5.5
+scaleTo: 5.5
+
+
+[effect_Allmatter]
+image: ROOT:Common/areaShock2.png
+priority: high
+alpha: 1.3
+attachedToUnit: true
+life: 100
+fadeInTime: 1
+fadeOut: true
+xOffsetAbsolute: 70
+yOffsetRelative: 40
+scaleFrom: 2
+scaleTo: 0.1
+drawUnderUnits: false
+dirOffset: 10
+dirSpeed: 6
 #========== End of Muzzle List ==========#
 
 [effect_fire1]
