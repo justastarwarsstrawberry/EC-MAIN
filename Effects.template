@@ -611,7 +611,7 @@ frame_height: 12
 #========== TELEPORTATION ==========#
 
 
-[effect_fastShockwave]
+[effect_fastShockwaveTELEPORT]
 xOffsetAbsolute: 70
 yOffsetRelative: 40
 priority: high
@@ -625,7 +625,7 @@ color: #08f2ff
 alsoEmitEffects: CUSTOM:Light, CUSTOM: Light2, CUSTOM:fastShockwave2LARGE, CUSTOM:fastShockwave2LARGEDIS
 
 [effect_fastShockwave2LARGE]
-@copyFromSection: effect_fastShockwave
+@copyFromSection: effect_fastShockwaveTELEPORT
 life:  100
 scaleFrom: 0.1
 scaleTo: 14
