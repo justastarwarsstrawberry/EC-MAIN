@@ -19,8 +19,58 @@ displayNameShort: AP
 displayColor: #1db5b5
 hidden: false
 
+[global_resource_Power]
+displayName: Power
+displayNameShort: Power
+displayColor: yellow
+hidden: false
+iconImage: ROOT:Common/Power.png
 [global_resource_ManPower]
 displayName: Manpower
 displayNameShort: MP
 displayColor: #71781d
 hidden:false
+
+
+[hiddenAction_shocked]
+setUnitStats: moveSpeed=0.0, maxAttackRange=0.0, maxTurnSpeed=0.0
+requireConditional: if not self.hasFlag (id=19)
+autoTriggerOnEvent: tookDamage(withTag="Shock_c") 
+autoTriggerOnEventRecursionLimit: 1
+alsoQueueAction: timer_s
+attachments_addNewUnits: iconeerForStun
+attachments_deleteNumUnits: 1
+attachments_onlyOnSlots: ICON69
+addResources: setFlag=19
+
+[hiddenAction_shocked2]
+@copyFromSection: hiddenAction_shocked
+requireConditional: if not self.hasFlag (id=24)
+autoTriggerOnEvent: tookDamage(withTag="Shock_osac") 
+alsoQueueAction: timer_s2
+addResources: setFlag=24
+
+[hiddenAction_timer_s]
+addResources: unsetFlag=19
+buildSpeed: 10s
+resetUnitStats: true
+attachments_deleteNumUnits: 1
+attachments_onlyOnSlots: ICON69
+
+[hiddenAction_timer_s2]
+@copyFromSection:hiddenAction_timer_s
+addResources: unsetFlag=24
+buildSpeed: 5s
+
+[attachment_ICON69]
+x: 0
+y: 0
+idleDir: -0
+isUnselectable: true
+canBeAttackedAndDamaged: true
+resetRotationWhenNotAttacking: false
+isVisible: true
+lockRotation: true
+lockLegMovement: true
+setDrawLayerOnTop: true
+rotateWithParent: false

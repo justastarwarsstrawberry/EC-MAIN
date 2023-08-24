@@ -608,6 +608,91 @@ animateFrameSpeed:0.09
 frame_width: 8
 frame_height: 12
 
+#====LASER ARTY CHARGING===+
+[effect_gatherdust]
+xOffsetAbsolute: 0
+yOffsetAbsolute: 0
+alpha: 0.55
+priority: high
+attachedToUnit: true
+life: 70
+scaleFrom: 3
+scaleTo: 0.35
+image: ROOT:Common/dust2.png
+drawUnderUnits: true
+fadeOut: true
+fadeInTime: 3
+
+
+dirSpeed: 5
+
+
+[effect_rings]
+xOffsetAbsolute: 0
+yOffsetAbsolute: 0
+scaleFrom: 0.8
+scaleTo: 3.5
+life:50
+xOffsetAbsolute: 0
+yOffsetAbsolute: 0
+alpha: 0.45
+priority: high
+image: ROOT:Common/ring.png
+color: red
+attachedToUnit: true
+alsoEmitEffects: lightr
+
+[effect_lightr]
+xOffsetAbsolute: 0
+yOffsetAbsolute: 0
+scaleFrom: 1
+scaleTo: 1
+image: ROOT:Common/light.png
+color:red
+life: 200
+alpha: 1.5
+priority: high
+attachedToUnit: false
+
+[effect_theyes]
+life: 55
+image: ROOT:Common/beam.png
+scaleFrom: 1
+scaleTo: 1
+attachedToUnit:false
+alpha: 0.8
+
+color:red
+
+
+[effect_fastShockwavelaser]
+xOffsetAbsolute: 0
+yOffsetRelative: 0
+priority: high
+attachedToUnit: true
+life: 200
+scaleFrom: 0.1
+scaleTo: 2.0
+stripIndex: shockwave_large
+drawUnderUnits: false
+color: red
+alsoEmitEffects: crator2
+[effect_crator2]
+life: 500
+scaleFrom: 1.4
+scaleTo: 1.4
+image: ROOT:Common/crater.png
+
+[effect_redexplo]
+life: 150
+image: ROOT:Common/ExplodeHugeRED.png
+scaleFrom: 1
+scaleTo: 2
+total_frames: 14
+animateFrameStart: 1
+animateFrameEnd: 14
+animateFrameSpeed: 0.3
+
 #========== TELEPORTATION ==========#
 
 

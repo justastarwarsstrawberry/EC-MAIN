@@ -15,7 +15,7 @@ showQuickWarLogToPlayer: Building completed
 [hiddenAction_deadBuilding]
 isActive: if self.tags(includes='building')
 autoTriggerOnEvent: destroyed 
-requireConditional: if not self.globalTeamTags(includes='VOICEOFF')
+requireConditional: if not self.globalTeamTags(includes='VOICEOFF') and self.tags(includes='building')
 playSoundToPlayer: ROOT:Voicelines/Misc/building lost.ogg:1000.0
 showQuickWarLogToPlayer: Building destroyed
 
