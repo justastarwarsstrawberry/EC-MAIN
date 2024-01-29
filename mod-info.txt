@@ -1,5 +1,5 @@
 [mod]
-title: Eternal Conflict v1.06
+title: Eternal Conflict v1.07
 description: The main version of EC. \n- "The smoke billows from a distance, hope in a fragile body contains all of the dreams of our generation....But the red plague stands in the way. everywhere you go and everywhere you are, we must take arms to make sure it doesn't extinct the little hope we have"
 
 tags: units, maps
