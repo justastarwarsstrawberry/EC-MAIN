@@ -693,6 +693,19 @@ animateFrameStart: 1
 animateFrameEnd: 14
 animateFrameSpeed: 0.3
 
+#====SHOCKWAVE======#
+[effect_fastShockwaveDISPLACE]
+xOffsetAbsolute: 10
+yOffsetRelative: 0
+priority: high
+attachedToUnit: true
+life: 100
+scaleFrom: 0.1
+scaleTo: 10
+stripIndex: shockwave_large
+drawUnderUnits: false
+
+
 #========== TELEPORTATION ==========#
 
 

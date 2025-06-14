@@ -1,0 +1,73 @@
+#armour Classification
+
+#Armour for normal infantry = 3
+#Armour for basic inf robots should be 5 
+#Light tanks = 7
+#Medium tanks = 10
+#heavy tanks = 15
+#SuperHeavyArmour = 18
+#Pre experimentals = 17-22
+#experimentals = 22+ and above
+#Aircraft (Standard) = 8
+
+
+#aircraft speed
+#Interceptor > 2.75 
+
+#accuracy Classification
+
+#TARGET GROUND
+#- Normal missiles (Fair)
+#- Bullets (poor when moving)
+
+
+
+#tagsfordays
+#LightArmour
+#MedArmour
+#HeavyArmour
+#SuperHeavyArmour
+#Aircraft
+#P_EXP
+#EXP
+#Infantry
+#Infantry_RB
+
+
+mutator1_ifUnitWithTags: infantry
+mutator1_directDamageMultiplier: 1.5
+#----------------------------------
+mutator1_ifUnitWithTags: LightArmour
+mutator1_directDamageMultiplier: 
+
+mutator2_ifUnitWithTags: MedArmour
+mutator2_directDamageMultiplier: 
+
+mutator3_ifUnitWithTags: SuperHeavyArmour
+mutator3_directDamageMultiplier: 
+
+mutator4_ifUnitWithTags: Infantry_RB
+mutator4_directDamageMultiplier: 
+
+mutator5_ifUnitWithTags: aircraft
+mutator5_directDamageMultiplier: 
+
+mutator6_ifUnitWithTags: HeavyArmour
+mutator6_directDamageMultiplier: 
+
+mutator7_ifUnitWithTags: P_EXP
+mutator7_directDamageMultiplier: 
+
+mutator8_ifUnitWithTags: EXP
+mutator8_directDamageMultiplier: 
+
+
+
+
+
+
+
+
+
+mutator7_ifUnitWithTags: experimental
+mutator7_directDamageMultiplier: 0.6
